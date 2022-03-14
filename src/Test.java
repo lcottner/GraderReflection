@@ -11,8 +11,8 @@ class Test
     private String s;
   
     // creating a public constructor
-   // public Test()  {  s = "GeeksforGeeks"; }
- //   public Test(int a)  {  s = "GeeksforGeeks"; }
+    public Test()  {  s = "GeeksforGeeks"; }
+   // public Test(int a)  {  s = "GeeksforGeeks"; }
   /*
     // Creating a public method with no arguments
     public void method1()  {
@@ -36,5 +36,4 @@ class Test
     }
     
 }
-
 

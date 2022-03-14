@@ -2,22 +2,21 @@ public class Rectangle{
 		  
 		  private int length;
 		  private int width;
-	/*	  
+		  
 	 public Rectangle(){
 		    
 		    length = 1;
 		   width = 1;
-		    
 		
 		  }//end constructor
-		 */
-		 /*
+	
+	 
 	 public Rectangle(int length, int width){
 		    
 		   this.length = length;
 		   this.width = width;
 		    }
-		   */ 
+		  
 	  //end constructor
 		  
 		  public int calculateArea(){
@@ -35,7 +34,7 @@ public class Rectangle{
 		    return width;
 		    
 		  }
-		  
+		
 		  public int getLength(){
 		    return length;
 		  }
