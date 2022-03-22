@@ -3,7 +3,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Constructor;
 
 public class Grader {
-	  
+	private String calculateArea="calculateArea";  
+	
 	public static void main(String[] args) throws Exception{
 	    Grader a = new Grader();
 	    	if (a.constru()==false)
@@ -15,12 +16,13 @@ public class Grader {
 
 	
 	public void grade()  {
-
+		Grader a=new Grader();
+		
 	//CalculateAreaTest1
 	String holder="CalculateAreaTest1";
 	
-	
 	Rectangle r = new Rectangle(5,17);
+	
 	if (r.calculateArea()==85) {
 		writeCorrect(holder);
 		} else {
@@ -79,7 +81,7 @@ public class Grader {
 public boolean constru() {
 	try{  
 	    Class <?> cls = Class.forName("Rectangle");
-		 
+		// System.out.println(cls);
 	/*Constructor<?>[] constructors = cls.getConstructors();
 	 for (int i=0; i<constructors.length; i++) {
 		   System.out.println(constructors[i].toGenericString());
@@ -95,14 +97,19 @@ public boolean constru() {
 		return false;
 	}
 	catch (ClassNotFoundException e) {
-		System.out.println("Class not found");
+		System.out.println("Rectangle class not found");
 		return false;
 	}
 }
 
+//For a new grader, change the declared method names and the parameters
+//include parameters in method call, and put if statements for each method.
+//Make methods for printing out methods exceptions (like the holder)
+//Experiment with making grader into a jar file and then into a library
 public boolean method() {
-	try{  
+	try{ 
 		 Rectangle rec = new Rectangle();
+	
 			Method met1 = rec.getClass().getDeclaredMethod("calculateArea");
 		    Method met2 = rec.getClass().getDeclaredMethod("calculatePerimeter");
 		    Method met3 = rec.getClass().getDeclaredMethod("getWidth");
@@ -120,7 +127,6 @@ public boolean method() {
 		return false;
 	}
 }
-	
 	
 	public void writeCorrect(String a) {
 		System.out.println(a+ " Correct");

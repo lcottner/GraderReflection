@@ -18,13 +18,14 @@ public class Rectangle{
 		    }
 		  
 	  //end constructor
-		  
+	 
 		  public int calculateArea(){
 		   
-		   return length * width;
-		    
-		  }//end calculateArea
+	   return length * width;
+		}  
 		  
+		  //end calculateArea
+	  
 		  public int calculatePerimeter(){
 		    return (length * 2) + (width *2);
 		  }//end calculatePerimeter
